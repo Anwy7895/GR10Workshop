@@ -13,7 +13,10 @@ public class GR10Workshop {
         tempSensor.setValue(20.0);
         tek.addSensor(tempSensor);
         
-        VentilationActuator ventilation = new VentilationActuator("Ventilation actuator", 2, 45.0);
+        Co2Sensor co2 = new Co2Sensor("CO2 sensor", 2, 25);
+        tek.addSensor(co2);
+        
+        VentilationActuator ventilation = new VentilationActuator("Ventilation actuator", 3, 45.0);
         ventilation.setValue(90.0);
         tek.addActuator(ventilation);
         
