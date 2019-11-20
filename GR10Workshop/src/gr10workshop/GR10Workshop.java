@@ -1,21 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gr10workshop;
 
-/**
- *
- * @author sofie
- */
+import java.util.HashMap;
+
 public class GR10Workshop {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        BuildingAdmin admin = new BuildingAdmin();
+        
+        Building tek = new Building("TEK", 1);
+        
+        TemperatureSensor tempSensor = new TemperatureSensor("Temperature sensor", 1, 23.0);
+        tempSensor.setValue(20.0);
+        tek.addSensor(tempSensor);
+        
+        VentilationActuator ventilation = new VentilationActuator("Ventilation actuator", 2, 45.0);
+        ventilation.setValue(90.0);
+        tek.addActuator(ventilation);
+        
+        admin.addBuilding(tek);
+        
+        for (String name : admin.getBuildings().keySet()) {
+            Building building = admin.getBuildings().get(name);
+            
+            System.out.println(building.toString());
+            
+            HashMap<String, Sensor> sensors = building.getSensors();   
+            for (String sensorName : sensors.keySet()) {
+                System.out.println(sensors.get(sensorName).toString());
+            }
+            
+            HashMap<String, Actuator> actuators = building.getActuators();
+            for (String actuatorName : actuators.keySet()) {
+                System.out.println(actuators.get(actuatorName).toString());
+            }
+            
+            System.out.println("");
+        }
     }
     
 }
