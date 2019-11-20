@@ -1,9 +1,11 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class Actuator extends Unit {
     protected double value;
     
-    public Actuator(String name, int id, double value) {
+    public Actuator(String name, UUID id, double value) {
         super(name, id);
         this.value = value;
     }
@@ -18,6 +20,6 @@ public class Actuator extends Unit {
     
     @Override
     public String toString() {
-        return "Name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
+        return "Actuator name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
     }
 }

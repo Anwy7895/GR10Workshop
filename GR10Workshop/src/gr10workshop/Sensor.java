@@ -1,10 +1,12 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class Sensor extends Unit {
     protected double value;
     protected String type;
     
-    public Sensor(String name, int id, String type, double value) {
+    public Sensor(String name, UUID id, String type, double value) {
         super(name, id);
         this.type = type;
         this.value = value;
@@ -24,6 +26,6 @@ public class Sensor extends Unit {
     
     @Override
     public String toString() {
-        return "Name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
+        return "Sensor name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
     }
 }

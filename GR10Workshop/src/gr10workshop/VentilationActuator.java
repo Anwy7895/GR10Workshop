@@ -1,7 +1,9 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class VentilationActuator extends Actuator {
-    public VentilationActuator(String name, int id, double value) {
+    public VentilationActuator(String name, UUID id, double value) {
         super(name, id, value);
     }
     
@@ -12,6 +14,6 @@ public class VentilationActuator extends Actuator {
     
     @Override
     public String toString() {
-        return "Name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
+        return "Actuator name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
     }
 }

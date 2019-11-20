@@ -1,8 +1,10 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class TemperatureSensor extends Sensor {
-    public TemperatureSensor(String name, int id, double value) {
-        super(name, id, "Temperature sensor", value);
+    public TemperatureSensor(String name, UUID id, double value) {
+        super(name, id, "Temperature", value);
     }
     
     @Override
@@ -17,6 +19,6 @@ public class TemperatureSensor extends Sensor {
     
     @Override
     public String toString() {
-        return "Name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
+        return "Sensor name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value;
     }
 }

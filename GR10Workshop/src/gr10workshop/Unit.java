@@ -1,15 +1,17 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class Unit {
     private String name;
-    private int id;
+    private UUID id;
     
-    public Unit(String name, int id) {
+    public Unit(String name, UUID id) {
         this.name = name;
         this.id = id;
     }
     
-    public int getId() {
+    public UUID getId() {
         return id;
     }
     

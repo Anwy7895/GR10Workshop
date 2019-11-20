@@ -1,7 +1,9 @@
 package gr10workshop;
 
+import java.util.UUID;
+
 public class Co2Sensor extends Sensor {
-    public Co2Sensor(String name, int id, double value) {
+    public Co2Sensor(String name, UUID id, double value) {
         super(name, id, "CO2", value);
     }
    
@@ -17,7 +19,7 @@ public class Co2Sensor extends Sensor {
     
     @Override
     public String toString() {
-        return "Name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value + "%";
+        return "Sensor name: " + this.getName() + " - Id: " + this.getId() + " - Value: " + this.value + "%";
     }
     
 }

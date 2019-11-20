@@ -1,12 +1,13 @@
 package gr10workshop;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 public class Building extends Unit {
     private HashMap<String, Sensor> sensors;
     private HashMap<String, Actuator> actuators;
     
-    public Building(String name, int id) {
+    public Building(String name, UUID id) {
         super(name, id);
         sensors = new HashMap<>();
         actuators = new HashMap<>();
@@ -20,19 +21,19 @@ public class Building extends Unit {
         return actuators;
     }
     
-    void addSensor(Sensor sensor) {
+    public void addSensor(Sensor sensor) {
         sensors.put(sensor.getName(), sensor);
     }
     
-    void removeSensor(String name) {
+    public void removeSensor(String name) {
         sensors.remove(name);
     }
     
-    void addActuator(Actuator actuator) {
+    public void addActuator(Actuator actuator) {
         actuators.put(actuator.getName(), actuator);
     }
     
-    void removeActuator(String name) {
+    public void removeActuator(String name) {
         actuators.remove(name);
     }
     
